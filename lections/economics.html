@@ -1,0 +1,441 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>economics</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+html {
+	font-size: 19px;
+}
+
+html, body {
+	margin: auto;
+	background: #fefefe;
+}
+body {
+	font-family: "Vollkorn", Palatino, Times;
+	color: #333;
+	line-height: 1.4;
+	text-align: justify;
+}
+#write {
+	max-width: 960px;
+	margin: 0 auto;
+	margin-bottom: 2em;
+	line-height: 1.53;
+	padding-top: 40px;
+}
+
+/* Typography
+-------------------------------------------------------- */
+
+#write>h1:first-child,
+h1 {
+	margin-top: 1.6em;
+	font-weight: normal;
+}
+
+h1 {
+	font-size:3em;
+}
+
+h2 {
+	margin-top:2em;
+	font-weight: normal;
+}
+
+h3 {
+	font-weight: normal;
+	font-style: italic;
+	margin-top: 3em;
+}
+
+h1, 
+h2, 
+h3{
+	text-align: center;
+}
+
+h2:after{
+	border-bottom: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    height: 1px;
+}
+
+h1+h2, h2+h3 {
+	margin-top: 0.83em;
+}
+
+p,
+.mathjax-block {
+	margin-top: 0;
+	-webkit-hypens: auto;
+	-moz-hypens: auto;
+	hyphens: auto;
+}
+ul {
+	list-style: square;
+	padding-left: 1.2em;
+}
+ol {
+	padding-left: 1.2em;
+}
+blockquote {
+	margin-left: 1em;
+	padding-left: 1em;
+	border-left: 1px solid #ddd;
+}
+code,
+pre {
+	font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
+	font-size: .9em;
+	background: white;
+}
+.md-fences{
+	margin-left: 1em;
+	padding-left: 1em;
+	border: 1px solid #ddd;
+	padding-bottom: 8px;
+	padding-top: 6px;
+	margin-bottom: 1.5em;
+}
+
+a {
+	color: #2484c1;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a img {
+	border: none;
+}
+h1 a,
+h1 a:hover {
+	color: #333;
+	text-decoration: none;
+}
+hr {
+	color: #ddd;
+	height: 1px;
+	margin: 2em 0;
+	border-top: solid 1px #ddd;
+	border-bottom: none;
+	border-left: 0;
+	border-right: 0;
+}
+.ty-table-edit {
+	background: #ededed;
+    padding-top: 4px;
+}
+table {
+	margin-bottom: 1.333333rem
+}
+table th,
+table td {
+	padding: 8px;
+	line-height: 1.333333rem;
+	vertical-align: top;
+	border-top: 1px solid #ddd
+}
+table th {
+	font-weight: bold
+}
+table thead th {
+	vertical-align: bottom
+}
+table caption+thead tr:first-child th,
+table caption+thead tr:first-child td,
+table colgroup+thead tr:first-child th,
+table colgroup+thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+	border-top: 0
+}
+table tbody+tbody {
+	border-top: 2px solid #ddd
+}
+
+.task-list{
+	padding:0;
+}
+
+.md-task-list-item {
+	padding-left: 1.6rem;
+}
+
+.md-task-list-item > input:before {
+	content: '\221A';
+	display: inline-block;
+	width: 1.33333333rem;
+  	height: 1.6rem;
+	vertical-align: middle;
+	text-align: center;
+	color: #ddd;
+	background-color: #fefefe;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	color: inherit;
+}
+.md-tag {
+	color: inherit;
+	font: inherit;
+}
+#write pre.md-meta-block {
+	min-height: 35px;
+	padding: 0.5em 1em;
+}
+#write pre.md-meta-block {
+	white-space: pre;
+	background: #f8f8f8;
+	border: 0px;
+	color: #999;
+	
+	width: 100vw;
+	max-width: calc(100% + 60px);
+	margin-left: -30px;
+	border-left: 30px #f8f8f8 solid;
+	border-right: 30px #f8f8f8 solid;
+
+	margin-bottom: 2em;
+	margin-top: -1.3333333333333rem;
+	padding-top: 26px;
+	padding-bottom: 10px;
+	line-height: 1.8em;
+	font-size: 0.9em;
+	font-size: 0.76em;
+	padding-left: 0;
+}
+.md-img-error.md-image>.md-meta{
+	vertical-align: bottom;
+}
+#write>h5.md-focus:before {
+	top: 2px;
+}
+
+.md-toc {
+	margin-top: 40px;
+}
+
+.md-toc-content {
+	padding-bottom: 20px;
+}
+
+.outline-expander:before {
+	color: inherit;
+	font-size: 14px;
+	top: auto;
+	content: "\f0da";
+	font-family: FontAwesome;
+}
+
+.outline-expander:hover:before,
+.outline-item-open>.outline-item>.outline-expander:before {
+  	content: "\f0d7";
+}
+
+/** source code mode */
+#typora-source {
+	font-family: Courier, monospace;
+    color: #6A6A6A;
+}
+
+.html-for-mac #typora-sidebar {
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+	color: #428bca;
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+	color: #777777;
+}
+
+.typora-node .file-list-item-parent-loc, 
+.typora-node .file-list-item-time, 
+.typora-node .file-list-item-summary {
+	font-family: arial, sans-serif;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: calc(1rem - 12px);
+}
+
+.md-mathjax-midline {
+	background: #fafafa;
+}
+
+.md-fences .code-tooltip {
+	bottom: -2em !important;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name="экономика" class="md-header-anchor"></a><span>Экономика</span></h1><p><span>Огромное спасибо за лекции Кириллу Дорожкову</span></p><p><span>Лекции будут отформатированы чуть позже</span></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#экономика">Экономика</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n6"><a class="md-toc-inner" href="#лекция-№1">Лекция №1</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n8"><a class="md-toc-inner" href="#предметы-и-методы-экономической-теории">Предметы и методы экономической теории.</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n9"><a class="md-toc-inner" href="#базовые-экономические-понятия">Базовые экономические понятия.</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n17"><a class="md-toc-inner" href="#основные-этапы-становления-и-развития-экономической-науки">Основные этапы становления и развития экономической науки.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n103"><a class="md-toc-inner" href="#предметы-экономические-теории-и-ее-роль-в-прогрессе-общества">Предметы экономические теории и ее роль в прогрессе общества.</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n104"><a class="md-toc-inner" href="#метод-исследования-экономических-ресурсов">Метод исследования экономических ресурсов.</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n139"><a class="md-toc-inner" href="#экономические-потребности-и-факторы-производства">Экономические потребности и факторы производства</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n153"><a class="md-toc-inner" href="#кривая-производственных-возможностей-альтернативные-издержки">Кривая производственных возможностей. Альтернативные издержки</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n181"><a class="md-toc-inner" href="#системы-организации-экономической-жизни-общества">Системы организации экономической жизни общества</a></span></p></div><p>&nbsp;</p><h2><a name="лекция-№1" class="md-header-anchor"></a><span>Лекция №1</span></h2><h3><a name="предметы-и-методы-экономической-теории" class="md-header-anchor"></a><span>Предметы и методы экономической теории.</span></h3><h4><a name="базовые-экономические-понятия" class="md-header-anchor"></a><span>Базовые экономические понятия.</span></h4><p><span> </span></p><p><span>•  Основные этапы становления и развития экономической науки. </span></p><p><span>•  Предметы экономические теории и ее роль в прогрессе общества. Метод исследования экономических </span></p><p><span>•  Экономические потребности и факторы производства !!!!</span></p><p><span>•  Кривая производственных возможностей. Альтернативные издержки !!!!</span></p><p><span>•  Системы организации экономической жизни общества </span></p><p><span> </span></p><h4><a name="основные-этапы-становления-и-развития-экономической-науки" class="md-header-anchor"></a><span>Основные этапы становления и развития экономической науки.</span></h4><p><span> </span></p><p><span>•   </span><strong><span>Экономика до нашей эры</span></strong></p><p><span>-</span><span>   Сведения об экономическом устройства общества можно найти в 18 столетии до нашей эры. </span></p><p><span>-</span><span>   Древний китайский трактат Куань-зы 2-4 до нашей эры. </span></p><p><span>-</span><span>   Сведения о теоретическом анализе можно найти у древних греков 2-3 до нашей эры</span></p><p><span>-</span><span>   Элементы теоретического анализа эконом явлений впервые используется у Аристотеля </span></p><p><span> </span></p><p><span>•   </span><strong><span>Эпоха средневековья</span></strong><span> </span></p><p><span>	</span><span>-    Значительный вклад внесли церковные юристы(канонисты) и католические богословы (теологи) Фома Аквинский (как образовать справедливую цену)</span></p><p><span>	</span><span>-    Как систематизированные знание экономическая наука начинает проявляться в 15 - 16 веках </span></p><p><span>•   </span><strong><span>Основные этапы развития экономической теории</span></strong><span> </span></p><p><span>-</span><span>   </span><strong><span>Меркантилизм (16-17 века)</span></strong></p><p><span>	</span><span>•  Основатель: Томас Ман, А. Серра, Антуан де Монкретьен.</span></p><p><span>	</span><span>•  Основные идеи:</span></p><p><span>		</span><span>-   Главное богатство общества - деньги </span></p><p><span>		</span><span>-   Источник богатства - сфера общения (торговля и денежный оборот)</span></p><p><span>		</span><span>-   Государство обязано вмешиваться в экономику</span></p><p><span>-</span><span>   </span><strong><span>Классическая политическая экономика</span></strong></p><p><strong><span>1.</span></strong><span>   </span><strong><span>Школа Физиократов(18 век)</span></strong></p><p><span>•  Основатель: Франсуа Кенэ</span></p><p><span>•  Основные идеи:</span></p><p><span>-</span><span>   Главное богатство общества - производство</span></p><p><span>-</span><span>   Производство в основном сельское хозяйство</span></p><p><span>-</span><span>   Приверженци протекционизма </span></p><p><strong><span>2.</span></strong><span>   </span><strong><span>Рыночная школа</span></strong></p><p><span>•  Основные идеи:</span></p><p><span>-</span><span>   Отстаивание принципа экономического либерализма </span></p><p><span>-</span><span>   Неприятие протекционизма в экономической политики государства </span></p><p><span>-</span><span>   Деньги являются неотъемлемой частью товарного мира</span></p><p><span>-</span><span>   применение прогрессивных методологических приемов исследования, включая причинно- следственный, дедуктивный и индуктивный методы, логическую абстракцию.</span></p><p><span> </span></p><p><span> </span></p><p><span> </span></p><p><span> </span></p><p><span> </span></p><p><span>-</span><span>   </span><strong><span>Марксистская политическая экономика(середина 19 века)</span></strong></p><p><span>•  Основатель:Карл Маркс и Фридрих Энгельс</span></p><p><span>•  Основные идеи:</span></p><p><span>-</span><span>   Капиталистическое производство несостоятельно </span></p><p><span>-</span><span>   Трудящиеся должны взять власть, чтобы уничтожать капитализм</span></p><p><span>-</span><span>   </span><strong><span>Экономикс</span></strong></p><p><span>•  Основатель: Альфред Маршалл</span></p><p><span>•  Основные идеи:</span></p><p><span>-</span><span>   Экономическое хозяйство рассматривается как совокупность макроэкономических агентов, желающие получить получить максимальную полезность при минимальных издержках </span></p><p><span>•  В экономикс есть два направления:</span></p><p><span>-</span><span>   Неоклассическое направление</span></p><p><span>            Государство должно лишь создавать благоприятные условия для                             функционирования частнопредпринимательской рыночной системе </span></p><p><span>-</span><span>   Кейнсианское направление</span></p><p><span>            государство должно активно регулировать экономику и социальную сферу</span></p><p><span> </span></p><p><span> </span></p><p><span> </span></p><p><strong><span>Морженализм</span></strong></p><p><span>      Основатель: К. Менгер</span></p><p><span>      Основная идея:</span></p><p><span>•     Исследование предельных экономических величин как взаимосвязанных явлений экономической системы в масштабе фирмы, отрасли, народного хозяйства. В центре нового учения стоял субъект с его потребностями.</span></p><p><span> </span></p><p><strong><span>Математическое направление</span></strong></p><p><span>Основная идея:</span></p><p><span>•  дать объяснение происходящих событий в экономической жизни с помощью моделей действительности, отразить в себе реальную экономику.</span></p><p><span> </span></p><p><strong><span>Нео-либерализм</span></strong></p><p><span>      Основная идея:</span></p><p><span>•   Каждый человек рассматривается как свободный предприниматель</span></p><p><span>•   а каждое социальное взаимодействие — как контракт (акт купли-продажи)</span></p><p><span> </span></p><p><strong><span>Монетаризм</span></strong></p><p><span>Основатель: Альфред Нобель     </span></p><p><span>Основная идея:</span></p><p><span>•   Количество денег в обращении является определяющим фактором развития экономики. Одно из главных направлений неоклассической экономической мысли.</span></p><p><span> </span></p><p><strong><span>Институциональное направление</span></strong></p><p><span>Основатель: Торстейн Веблен     </span></p><p><span>Основная идея:</span></p><p><span>•   Экономические явления функционирую и развиваются не только под действием чисто эконом факторов, но и не эконом факторов</span></p><p><span>•   Так же на развитее влияет технологический прогресс</span></p><p><span> </span></p><p><span> </span></p><p><span> </span></p><p><span> </span></p><p><span> </span></p><p><span> </span></p><p><span> </span></p><p><span> </span></p><h3><a name="предметы-экономические-теории-и-ее-роль-в-прогрессе-общества" class="md-header-anchor"></a><span>Предметы экономические теории и ее роль в прогрессе общества.</span></h3><h4><a name="метод-исследования-экономических-ресурсов" class="md-header-anchor"></a><span>Метод исследования экономических ресурсов.</span></h4><p><span> </span></p><p><strong><span>Экономика делиться на два раздела.</span></strong><span> </span></p><p><span>•   Макроэкономика </span></p><p><span>В данном разделе экономики рассматриваются главным образом глобальные проблемы функционирования и развития национальной экономики.</span></p><p><span>•   Микроэкономика</span></p><p><span>составная часть экономической теории, изучающая экономические взаимоотношения между людьми и определяющая общие закономерности их хозяйственной деятельности.</span></p><p><span> </span></p><p><strong><span>Функции экономической теории</span></strong></p><ol><li><p><span>Познавательную</span></p><p><span>Познавательная функция состоит в том, чтобы всесторонне изучить формы       экономических явлений и их внутреннюю сущность, что позволяет открыть        законы, по которым развивается национальное хозяйство.</span></p></li><li><p><span>Прогностическую</span></p><p><span>Прогностическая функция экономической теории состоит в определении                перспектив социально-экономического развития на будущее.</span></p></li><li><p><span>Практическую</span></p><p><span>Практическая (прагматическая) функция состоит в научном обосновании экономической политики государства, выявлении принципов и методов рационального хозяйствования на всех уровнях функционирования экономики. </span></p></li><li><p><span>Критическую</span></p><p><span>Критическая функция экономической теории позволяет выявлять достижения и недостатки различных форм производства.</span></p></li><li><p><span>Методологическую</span></p><p><span>Методологическая функция экономической теории заключается в том, что она является основой, которая позволяет определить направленность экономического развития (например, капитализм, социализм и т.п.), в зависимости от которого конкретные проблемы получают определенную оценку, имеют конкретную значимость для людей.</span></p></li><li><p><span>Воспитательную</span></p><p><span>Воспитательная функция связана с формированием определенного мировоззрения, взглядов по различным экономическим вопросам, затрагивающим интересы всего общества.</span></p></li></ol><p><span> </span></p><p><strong><span>Общественное производство состоит:</span></strong></p><ol><li><span>Производство </span></li></ol><ol start='2' ><li><span>Распределение </span></li></ol><ol start='3' ><li><span>Обмен</span></li></ol><ol start='4' ><li><span>Потребление </span></li></ol><p><span> </span></p><p><strong><span>Заключающая понятие</span></strong></p><p><span>Предметом экономической теории является действительное поведение людей производства, распределение, обмена и потребления материальных благ и услуг с цель удовлетворения потребностей людей в мире ограниченных ресурсов, что заставляет общество эффективнее их использовать и вызывает конкуренцию. </span></p><h4><a name="экономические-потребности-и-факторы-производства" class="md-header-anchor"></a><span>Экономические потребности и факторы производства</span></h4><p><strong><span>Факторы производства</span></strong></p><p><span>•   Земля </span></p><p><span>•   труд </span></p><p><span>•   капитал </span></p><p><span>•   предпринимательские способности </span></p><p><span>•   знания и информация</span></p><p><span> </span></p><p><strong><span>Эффективность -</span></strong><span> соотношение между достигнутым результатом и использованными ресурсами</span></p><p><span> </span></p><p><strong><span>Экономические потребности</span></strong><span> представляют собой часть общественных потребностей, удовлетворение которых связано с функционированием общественного воспроизводства.</span></p><h4><a name="кривая-производственных-возможностей-альтернативные-издержки" class="md-header-anchor"></a><span>Кривая производственных возможностей. Альтернативные издержки</span></h4><figure><table><thead><tr><th>&nbsp;</th><th>&nbsp;</th></tr></thead><tbody><tr><td>&nbsp;</td><td><img src="file:///C:\Users\mag13\AppData\Local\Temp\msohtmlclip1\01\clip_image002.jpg" referrerpolicy="no-referrer" alt="img"></td></tr></tbody></table></figure><p><strong><span>Организовывая производство нужно задавать вопросы:</span></strong></p><p><span>•  Что производить </span></p><p><span>•  Как произвести </span></p><p><span>•  Для кого произвести </span></p><p><span>•  Когда произвести </span></p><h4><a name="системы-организации-экономической-жизни-общества" class="md-header-anchor"></a><span>Системы организации экономической жизни общества</span></h4><p><strong><span>Существующие системы:</span></strong></p><p><span>•  Традиционная</span></p><p><span>•  Командно административная </span></p><p><span>•  Рыночная</span></p><p><span>•  Смешанная (власть+рынок)</span></p><p>&nbsp;</p><p><strong><span>Экономические законы</span></strong></p><p><span>•     возвышения потребностей;</span></p><p><span>•     зависимости между спросом и ценой (закон спроса);</span></p><p><span>•     зависимости между предложением и ценой (закон предложения);</span></p><p><span>•     зависимости между предложением и спросом;</span></p><p><span>•     возрастания дополнительных затрат;</span></p><p><span>•     убывающей доходности;</span></p><p><span>•     экономической взаимосвязи затрат в сферах производства и потребления;</span></p><p><span>•     эффекта масштаба производства;</span></p><p><span>•     эффекта опыта;</span></p><p><span>•     экономии времени;</span></p><p><span>•     конкуренции.</span></p><p><span> </span></p><p><strong><span>Американская экономическая модель</span></strong><span> </span></p><p><span>Основные идеи:</span></p><p><span>•  всемерное поощрение американским обществом и государством предпринимательской активности, </span></p><p><span>•  благоприятный предпринимательский климат, </span></p><p><span>•  общественная установка на достижение успеха для каждого человека, </span></p><p><span>•  Государственная собственность представлена лишь в атомной энергетике, в производственной инфраструктуре (мосты, дороги, трубопроводы), в образовании и здравоохранении;</span></p><p><span> </span></p><p><span> </span></p><p><span> </span></p><p><span>После этих слов вся лекция, которая была написана прямо на лекции</span></p><p><span> </span></p><p><span>Основатели классической буржуазной экономики (адам Смит )</span></p><p><span>Источник богатства в сфере материального производства (рикардо Смит)</span></p><p><span>Основные работы «Исследование природы и причинах богатства народов»</span></p><p><span>Много внимания удилятся рынку, конкуренции, трудовой теории стоимости. Рынок сравнивают с невидимой рукой. </span></p><p><span>Обосновывает деления общества на классы по экономическому признаку </span></p><p><span>Рикардо основную свою задачу считал обосновать законы распределения. Доказывал что стоимость созданная трудом является общей основой для формирования всех классов. </span></p><p><span>Доказывал что земля не является фактором производства </span></p><p><span>Прибыль рынка образуется как вычет </span></p><p><span> </span></p><p><span> </span></p><p><span>Марк Энгель Ленин </span></p><p><span>Создают учение марксизм. </span></p><p><span>Маркс завершает трудовую теорию рекорда и доказывает что всякий продукт создается трудом наемного рабоче а присваеваиться собственникам земли и капитала </span></p><p><span> </span></p><p><span>Критикой классической школы являются представители исторической школы </span></p><p><span>Они доказывают что экономика каждой страны функционирует на основе </span></p><p><span>Георафических условий этой страны </span></p><p><span>С учетом эконом развития этой страны </span></p><p><span>Нац культурных традиций этой страны </span></p><p><span>Вебер Рашер </span></p><p><span> </span></p><p><span>Марженализм </span></p><p><span>Курло Гассен</span></p><p><span> </span></p><p><span>Математическое направление </span></p><p><span> Можно разработать модель общего равновесия на основе анализа спроса и предложения </span></p><p><span> </span></p><p><span> </span></p><p><span>Одним из современной науки является нео классическое направление </span></p><p><span>Экономикс </span></p><p><span>Предметов экономической теории является поведение людей в процессе производства и потребления материальных благ и услуг в условия ограниченных ресурсов. </span></p><p><span> </span></p><p><span>Принципы экономической науки (маршал)</span></p><p><span>В этой работе анализируется механизм рыночного ценю образования взаимодействия спроса и предложения влияние различных факторов на предложение уровень рыночных цен </span></p><p><span>Теорией издержак производства </span></p><p><span>Предметом анализа является теория цены </span></p><p><span> </span></p><p><span> </span></p><p><span> </span></p><p><span> </span></p><p><span>Кеньсианское (мировой экономический кризис)</span></p><p><span> </span></p><p><span>Данная теория утверждает что без государства нельзя сделать рыночную экономику </span></p><p><span> </span></p><p><span>Теория Нео-лебирализма </span></p><p><span>Ойке низес </span></p><p><span>Они считают рынок наиболее эффективное форма хозяйства </span></p><p><span>Лучшие экономический рост </span></p><p><span>Лучшая занятость </span></p><p><span>Они отстаивают приоритетное значение свободы </span></p><p><span> </span></p><p><span>Монетаризм (милтан фридман)</span></p><p><span>Идеи </span></p><p><span>Он считал что стабилизация экономики должна основываться на господствующей в ней денежных факторов </span></p><p><span> </span></p><p><span>Управление экономикой основывается на контроле </span></p><p><span>Над денежной массы</span></p><p><span>Гос бюджет </span></p><p><span> </span></p><p><span>Институциональное направление </span></p><p><span>(митчел гелбрейт)</span></p><p><span>Они утверждают что эконом явления функционирую и развиваются не только вод действием чисто эконом факторов но и не эконом факторов </span></p><p><span>Научно технический прогресс </span></p><p><span> </span></p><p><span>Они доказывают что развитие способно обеспечить развитие обществу от индустриального до супер индустриального бесконфликтно </span></p><p><span> </span></p><p><span>Эволюционное </span></p><p><span>Они рассматривают рандомные эконом процессы которые поражаются под влиянием внутр и вне факторов </span></p><p><span> Конкуренции </span></p><p><span>Процессу отбора </span></p><p><span> </span></p><p><span>—————————————————————————————————————</span></p><p><span>Общественное производство состоит </span></p><p><span>Из производства распределения обмена и потребленияъ</span></p><p><span> </span></p><p><span>Предметом экономической теории является действительно поведение людей производство распределение обмена и потребления материальных благ и услуг с цель удовлетворения потребностей людей в мире ограниченных ресурсов что заставляет общество эффективнее их использовать и вызывает конкуренцию </span></p><p><span> </span></p><p><span> </span></p><p><span> </span></p><p><span> </span></p><p><span>Эконом наука делиться на два раздела </span></p><p><span>Микроэкономика !!!!!</span></p><p><span>Макроэкономика !!!!!</span></p><p><span> </span></p><p><span>Функции экономической теории !!!!!!</span></p><p><span> </span></p><p><span> </span></p><p><span> </span></p><p><span> </span></p><p><span> </span></p><p><span> </span></p><p><span>—————————————————————————-</span></p><p><span>Факторы производства </span></p><p><span>Земля труд капитал предпринимательские способности знаея информация </span></p><p><span> </span></p><p><span>Эффективность !!!</span></p><p><span> </span></p><p><span>Эконом ресурсы рассматриваем </span></p><p><span>Нужно учитывать </span></p><p><span>      уровень развития</span></p><p><span>      уровень тех прогресса </span></p><p><span>Определяя оптимум нужно базироваться на замещении их и альтернативности </span></p><p><span> </span></p><p><span>————————————————————————————————</span></p><p><span> </span></p><p><span>Что производить </span></p><p><span>Как произвести </span></p><p><span>Для кого произвести </span></p><p><span>И когда произвести </span></p><p><span> </span></p><p><span>      </span></p><p><span>——————————————————</span></p><p><span> </span></p><p><span>Таких систем 4 </span></p><p><span>Традиционная </span></p><p><span>Командно административная </span></p><p><span>Рыночная </span></p><p><span>Смешанная (власть+рынок)</span></p><p><span> </span></p><p><span>Совокупность механизмов с помощью которых используется эконом ресурсы для создания благ и услуг </span></p></div>
+</body>
+</html>
